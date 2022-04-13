@@ -6,10 +6,11 @@ const {
   randomDialogue,
   randomDialoguesLimit,
   getAllDialogues,
+  numOfDialogues,
 } = require("./controller");
 
 const app = express();
-
+app.set("view engine", "ejs");
 const apiLimiter = expressRateLimit({
   windowMS: 10 * 60 * 1000,
   max: 100,
@@ -21,7 +22,9 @@ const apiLimiter = expressRateLimit({
 app.use(apiLimiter);
 
 app.use(cors());
-
+app.get("/", (req, res) => {
+  res.render("index", { amount: numOfDialogues() });
+});
 //route to get random dialogue
 app.get("/random", (req, res) => {
   res.json(randomDialogue());

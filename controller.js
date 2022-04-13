@@ -33,10 +33,13 @@ const randomDialoguesLimit = function (n) {
 const getAllDialogues = function () {
   return dialogues;
 };
-
+const numOfDialogues = function () {
+  return dialogues.length;
+};
 //exporting the functions to use in app.js
 module.exports = {
   randomDialogue,
   randomDialoguesLimit,
   getAllDialogues,
+  numOfDialogues,
 };
