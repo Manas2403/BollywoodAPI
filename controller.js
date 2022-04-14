@@ -11,12 +11,12 @@ const randomDialoguesLimit = function (n) {
   //invalid request
   if (n > dialogues.length) {
     return {
-      error: ` The demand of value of number of dialogues exceeds the famous dialogues in the available data. Input a number between 1 and ${dialogues.length}`,
+      error: `The demand of value of number of dialogues exceeds the famous dialogues in the available data. Input a number between 1 and ${dialogues.length}`,
     };
     //invalid request
   } else if (n < 1 || !Number.isInteger(n)) {
     return {
-      error: ` The requested data is less than 1 or is not a number.Please enter a valid number between 1 and ${dialogues.length}`,
+      error: `The requested data is less than 1 or is not a number.Please enter a valid number between 1 and ${dialogues.length}`,
     };
     //valid request
   } else {

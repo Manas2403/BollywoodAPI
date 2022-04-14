@@ -14,19 +14,21 @@
         margin: 0;
       }
       li {
-        padding: 5px;
+        padding: 10px;
+        list-style: decimal;
       }
     </style>
   </head>
   <body>
     <div>
       <ul>
-        <li><a href="/random">/random</a>:Random Bollywood dialogue</li>
+        <li><a href="/random">/random</a> :Random Bollywood dialogue</li>
         <li>
-          <a href="/random/5">/random/&lt;integer&gt;</a>Specified number of
-          random Bollywood dialogues,has to be less than or equal to <%=amount%>
+          <a href="/random/5">/random/&lt;integer&gt;</a> :Specify the number of
+          random Bollywood dialogues after /random/ in the url, has to be less
+          than or equal to <%=amount%>.
         </li>
-        <li><a href="/all">/all</a>:All famous bollywood dialogues</li>
+        <li><a href="/all">/all</a> :All top 100 famous bollywood dialogues</li>
       </ul>
     </div>
   </body>
