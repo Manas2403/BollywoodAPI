@@ -18,7 +18,7 @@ const apiLimiter = expressRateLimit({
   max: 200,
   windowMS: 10 * 60 * 1000,
   message:
-    "Too many requests created from this IP,please try again after some time",
+    "Too many requests created from this IP, please try again after some time",
   standardHeaders: true, //return the rate limit info in the `Ratelimit-*` headers
   legacyHeaders: false, //X-RateLimit-Limit is the number of requests allowed during 60 sec window
 });
